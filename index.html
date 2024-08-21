@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafting Calculator</title>
+    <link rel="stylesheet" href="localhost/style.css">
+</head>
+<body>
+    <div class="background-section">
+        <div class="container">
+            <h1>Crafting Calculator</h1>
+
+            <!-- Category Buttons -->
+            <div id="category-button"></div>
+            
+            <!-- Form for Item Selection -->
+            <form id="crafting-form">
+                <label for="items-select">Select Item:</label>
+                <select id="items-select"></select>
+
+                <div id="choosable-materials-form" class="hidden">
+                    <label for="choosable-materials-select">Select Material:</label>
+                    <select id="choosable-materials-select"></select>
+                </div>
+                
+                <label for="quantity-input">Quantity:</label>
+                <input type="number" id="quantity-input" min="1" max="99" value="1">
+
+                <button type="button" id="calculate-btn">Calculate</button>
+                <button type="button" id="reset-btn">Reset</button>
+            </form>
+
+            <!-- Result Container -->
+            <div class="result-container"></div>
+
+            <!-- Spinner -->
+            <div id="spinner" class="hidden">Loading...</div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="localhost/script.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+</html>
